@@ -8,4 +8,32 @@
     width: 100%;
     height: 100vh;
     background: #121212;
+    display: flex;
+    align-content: center;
+    justify-content: center;
 }
+
+#input-div {
+    border: 1px solid red;
+    height: fit-content;
+}
+
+.input-box {
+    width: 600px;
+    height: 122px;
+    margin-top: 50px;
+    border-radius: 30px;
+    padding: 15px;
+    font-weight: 500;
+    font-size: 48px;
+    outline: none;
+    border: none;
+    background: #5465BF;
+    color: #FFFFFF;
+}
+
+.input-box::placeholder {
+    color: #FFFFFF;
+    opacity: 0.6;
+}
+
