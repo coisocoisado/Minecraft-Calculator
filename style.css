@@ -9,8 +9,9 @@
     height: 100vh;
     background: #121212;
     display: flex;
-    align-content: center;
-    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 100px;
 }
 
 #input-div {
@@ -21,7 +22,7 @@
 .input-box {
     width: 600px;
     height: 122px;
-    margin-top: 50px;
+    margin-top: 70px;
     border-radius: 30px;
     padding: 15px;
     font-weight: 500;
@@ -37,3 +38,49 @@
     opacity: 0.6;
 }
 
+#buttons-div {
+    border: 1px solid red;
+    display: flex;
+    gap: 45px;
+}
+
+button {
+    color: #121212;
+    font-weight: 500;
+    font-size: 45px;
+}
+
+button:hover {
+    opacity: 0.7;
+}
+
+.calc-btn {
+    border: none;
+    width: 205px;
+    height: 100px;
+    border-radius: 15px;
+    border-bottom: 8px solid #5465BF;
+    cursor: pointer;
+    transition: transform .2s, border-bottom .2s, height .2s;
+}
+
+.calc-btn:active {
+    border-bottom: 4px solid #29377e;
+    height: 96px;
+    transform: translateY(4px)
+}
+
+.copy-btn {
+    border: none;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.copy-btn ion-icon {
+    --ionicon-stroke-width: 40px;
+}
