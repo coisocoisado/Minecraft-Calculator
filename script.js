@@ -27,15 +27,16 @@ function CalcShulkers() {
         let shulkers = itemAmount / 1728;
         let floorShulkers = Math.floor(shulkers);
         let itemRemainder = (shulkers - floorShulkers) * 1728;
+        itemRemainder = Math.round(itemRemainder);
 
         stacks = itemRemainder / 64;
         let floorStacks = Math.floor(stacks);
         let stacksItemRemainder = (stacks - floorStacks) * 64;
 
-        output.value = `${floorShulkers} shulkers, ${floorStacks} stacks and ${Math.round(stacksItemRemainder)} items`;
+        output.value = `${floorShulkers} shulkers, ${floorStacks} stacks and ${stacksItemRemainder} items`;
 
         // Calculate the width to fit content
-        invisibleInput.value = `${floorShulkers} shulkers, ${floorStacks} stacks and ${Math.round(stacksItemRemainder)} items`;
+        invisibleInput.value = `${floorShulkers} shulkers, ${floorStacks} stacks and ${stacksItemRemainder} items`;
     }
 }
 
