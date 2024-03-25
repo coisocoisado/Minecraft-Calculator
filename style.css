@@ -47,7 +47,7 @@ button {
     color: #121212;
     font-weight: 500;
     font-size: 45px;
-    transition: transform .2s, border-bottom .2s, height .2s;
+    transition: transform .2s, border-bottom .2s, height .2s, opacity .2s;
 }
 
 button:hover {
@@ -55,9 +55,9 @@ button:hover {
 }
 
 button:active {
-    border-bottom: 4px solid #29377e;
+    border-bottom: 4px solid #5465BF;
     height: 96px;
-    transform: translateY(4px)
+    transform: translateY(4px);
 }
 
 .calc-btn {
