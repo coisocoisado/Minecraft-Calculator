@@ -32,10 +32,10 @@ function CalcShulkers() {
         let floorStacks = Math.floor(stacks);
         let stacksItemRemainder = (stacks - floorStacks) * 64;
 
-        output.value = `${floorShulkers} shulkers, ${floorStacks} stacks and ${Math.round(stacksItemRemainder)} items.`;
+        output.value = `${floorShulkers} shulkers, ${floorStacks} stacks and ${Math.round(stacksItemRemainder)} items`;
 
         // Calculate the width to fit content
-        invisibleInput.value = `${floorShulkers} shulkers, ${floorStacks} stacks and ${Math.round(stacksItemRemainder)} items.`;
+        invisibleInput.value = `${floorShulkers} shulkers, ${floorStacks} stacks and ${Math.round(stacksItemRemainder)} items`;
     }
 }
 
@@ -46,3 +46,14 @@ function AdjustOutputWidth() {
     output.style.width = scrollWidth + 'px';
 }
 
+function CopyText() {
+    // Get the text field
+    let copyText = output;
+      
+    // Select the text field
+    copyText.select();
+    copyText.setSelectionRange(0, 99999); // For mobile devices
+      
+    // Copy the text inside the text field
+    navigator.clipboard.writeText(copyText.value);
+}
